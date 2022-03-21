@@ -30,7 +30,18 @@ public class StudentController {
 
 		return "list-Students";
 	}
-	
+
+	@RequestMapping("/showFormForAdd")
+	public String showFormForAdd(Model theModel) {
+
+		// create model attribute to bind form data
+		Student student = new Student();
+
+		theModel.addAttribute("Student", student);
+
+		return "Student-form";
+	}
+
 	@RequestMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("studentId") int id,Model theModel) {
 
@@ -43,11 +54,11 @@ public class StudentController {
 
 		return "Student-form";
 	}
-	
+
 	@RequestMapping("/save")
 	public String saveStudent(@RequestParam("studentId") int id,
 			@RequestParam("name") String name,@RequestParam("department") String department,@RequestParam("country") String country) {
-		
+
 		System.out.println(id);
 		Student student;
 		if(id!=0)

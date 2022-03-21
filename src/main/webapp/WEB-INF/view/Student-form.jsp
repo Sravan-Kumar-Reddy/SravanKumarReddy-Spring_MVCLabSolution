@@ -26,9 +26,9 @@
 		<h3>Student Directory</h3>
 		<hr>
 
-		<p class="h4 mb-4">Update Book</p>
+		<p class="h4 mb-4">Add/Update Book</p>
 
-		<form action="/StudentManagementDemo/students/save" method="POST">
+		<form action="/StudentManagement/students/save" method="POST">
 
 			<!-- Add hidden form field to handle update -->
 			<input type="hidden" name="studentId" value="${Student.studentId}" />
@@ -64,18 +64,8 @@
 		</form>
 
 		<hr>
-		<a href="/StudentManagementDemo/students/list">Back to Student List</a>
+		<a href="/StudentManagement/students/list">Back to Student List</a>
 	</div>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
