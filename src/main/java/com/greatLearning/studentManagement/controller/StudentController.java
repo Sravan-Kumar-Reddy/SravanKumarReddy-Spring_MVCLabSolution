@@ -43,7 +43,7 @@ public class StudentController {
 	}
 
 	@RequestMapping("/showFormForUpdate")
-	public String showFormForUpdate(@RequestParam("studentId") int id,Model theModel) {
+	public String showFormForUpdate(@RequestParam("studentId") int id, Model theModel) {
 
 		System.out.println("Request Received");
 		// get Books from db
@@ -56,27 +56,23 @@ public class StudentController {
 	}
 
 	@RequestMapping("/save")
-	public String saveStudent(@RequestParam("studentId") int id,
-			@RequestParam("name") String name,@RequestParam("department") String department,@RequestParam("country") String country) {
+	public String saveStudent(@RequestParam("studentId") int id, @RequestParam("name") String name,
+			@RequestParam("department") String department, @RequestParam("country") String country) {
 
 		System.out.println(id);
 		Student student;
-		if(id!=0)
-		{
-			student=studentService.findById(id);
+		if (id != 0) {
+			student = studentService.findById(id);
 			student.setName(name);
 			student.setDepartment(department);
 			student.setCountry(country);
-		}
-		else
-			student=new Student(name, department, country);
+		} else
+			student = new Student(name, department, country);
 		studentService.save(student);
-
 
 		// use a redirect to prevent duplicate submissions
 		return "redirect:/students/list";
 	}
-
 
 	@RequestMapping("/delete")
 	public String delete(@RequestParam("studentId") int theId) {

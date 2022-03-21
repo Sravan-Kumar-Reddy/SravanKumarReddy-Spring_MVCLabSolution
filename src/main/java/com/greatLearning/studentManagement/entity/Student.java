@@ -8,21 +8,21 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Student")
+@Table(name = "Student")
 public class Student {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="`Student Id`")
+	@Column(name = "`Student Id`")
 	private int studentId;
-	
-	@Column(name="Name")
+
+	@Column(name = "Name")
 	private String name;
-	
-	@Column(name="Department")
+
+	@Column(name = "Department")
 	private String department;
-	
-	@Column(name="Country")
+
+	@Column(name = "Country")
 	private String country;
 
 	public int getStudentId() {
@@ -56,8 +56,6 @@ public class Student {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	
-	
 
 	public Student(String name, String department, String country) {
 		super();
@@ -67,24 +65,13 @@ public class Student {
 	}
 
 	public Student() {
-		
+
 	}
 
 	@Override
 	public String toString() {
 		return "Student [studentId=" + studentId + ", name=" + name + ", department=" + department + ", country="
 				+ country + "]";
-	}	
-	
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-

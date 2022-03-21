@@ -11,8 +11,6 @@ public interface StudentService {
 	
 	List<Student> findAll();
 
-//	List<Student> searchBy(String name, String department);
-
 	Student findById(int id);
 
 	void save(Student student);

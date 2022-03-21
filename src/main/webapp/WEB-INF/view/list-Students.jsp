@@ -24,13 +24,13 @@
 	<div class="container">
 
 		<h3>Students Directory</h3>
-	<hr>
+		<hr>
 
 		<!-- Add a search form -->
 
-			<!-- Add a button -->
-			<a href="/StudentManagement/students/showFormForAdd"
-				class="btn btn-primary btn-sm mb-3"> Add Student </a>
+		<!-- Add a button -->
+		<a href="/StudentManagement/students/showFormForAdd"
+			class="btn btn-primary btn-sm mb-3"> Add Student </a>
 
 		<table class="table table-bordered table-striped">
 			<thead class="thead-dark">
@@ -54,7 +54,8 @@
 							<!-- Add "update" button/link --> <a
 							href="/StudentManagement/students/showFormForUpdate?studentId=${tempStudent.studentId}"
 							class="btn btn-info btn-sm"> Update </a> <!-- Add "delete" button/link -->
-							<a href="/StudentManagement/students/delete?studentId=${tempStudent.studentId}"
+							<a
+							href="/StudentManagement/students/delete?studentId=${tempStudent.studentId}"
 							class="btn btn-danger btn-sm"
 							onclick="if (!(confirm('Are you sure you want to delete this Student?'))) return false">
 								Delete </a>

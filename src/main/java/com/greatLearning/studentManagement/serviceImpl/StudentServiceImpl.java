@@ -36,29 +36,6 @@ public class StudentServiceImpl implements StudentService {
 		transaction.commit();
 		return studentList;
 	}
-	
-
-	/*
-	 * @Override
-	 *
-	 * @Transactional public List<Student> searchBy(String name, String department)
-	 * {
-	 *
-	 * Transaction transaction = session.beginTransaction(); List<Student>
-	 * studentList = null; if ((name != null) && (!department.isEmpty()) &&
-	 * (department != null) && (!department.isEmpty())) { studentList = session
-	 * .createQuery("from Student where name like %" + name +
-	 * " and department like %" + department, Student.class) .list(); } else if
-	 * (!name.isEmpty()) { studentList =
-	 * session.createQuery("from Student where name like %" + name,
-	 * Student.class).list(); } else if (!department.isEmpty()) { studentList =
-	 * session.createQuery("from Student where department like %" + department,
-	 * Student.class).list(); } else { System.out.println("Invalid Arguments"); }
-	 *
-	 * transaction.commit(); return studentList;
-	 *
-	 * }
-	 */
 
 	@Override
 	@Transactional
